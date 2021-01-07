@@ -107,8 +107,14 @@ public class Poll
       marble.ApplySpeedImpulse();
     } else   
       marble.ApplyBreakImpulse();
-    
-    castBallots.Clear();
+
+    ClearPoll();
     UpdateVoteCount();
+  }
+
+  private void ClearPoll()
+  {
+    castBallots.Clear();
+    optionAVotes = optionBVotes = optionCVotes = optionDVotes = 0;
   }
 }
