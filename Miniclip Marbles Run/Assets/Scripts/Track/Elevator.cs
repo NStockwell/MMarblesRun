@@ -22,6 +22,7 @@ public class Elevator : MonoBehaviour
             paddle.delay = i * TimeToClimb / NumPaddles;
             paddle.start = start;
             paddle.end = end;
+            paddle.transform.rotation = transform.rotation;// Quaternion.Euler(paddle.transform.eulerAngles.x, transform.eulerAngles.y, paddle.transform.eulerAngles.z);
         }
     }
 }
