@@ -3,11 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerScript : MonoBehaviour
+public class Trigger : MonoBehaviour
 {
     public bool isFinish;
-    private GameObject winnerMarble;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,14 +22,8 @@ public class TriggerScript : MonoBehaviour
     {
         if (isFinish)
         {
-            if (winnerMarble == null)
-            {
-                winnerMarble = other.gameObject;
-                Debug.Log("Winner Marble is: " + winnerMarble.name);
-            }
-            
             // Reset Marble to starting position
-            RaceManagerScript.Instance.ResetMarble(other.gameObject);
+            RaceManager.Instance.ResetMarble(other.gameObject);
         }
     }
 }

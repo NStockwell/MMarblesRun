@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class RaceManagerScript : MonoBehaviour
+public class RaceManager : MonoBehaviour
 {
-    private static RaceManagerScript _instance;
+    private static RaceManager _instance;
 
-    public static RaceManagerScript Instance
+    public static RaceManager Instance
     {
         get => _instance;
     }
@@ -18,6 +18,8 @@ public class RaceManagerScript : MonoBehaviour
     public GameObject marble4;
 
     private Dictionary<GameObject, Vector3> _initialPositions = new Dictionary<GameObject, Vector3>();
+    private Marble winnerMarble;
+    private const int k_maxLaps = 10;
     
     private void Awake() 
     { 
@@ -50,6 +52,28 @@ public class RaceManagerScript : MonoBehaviour
     {
         if (_initialPositions.ContainsKey(marble))
         {
+            // Add a lap and check for end condition
+            Marble marbleScript = marble.GetComponent<Marble>();
+            if (marbleScript != null)
+            {
+                if (marbleScript.GetNumLaps() == k_maxLaps)
+                {
+                    if (winnerMarble == null)
+                    {
+                        Debug.Log("Winner Marble is: " + marbleScript.ID + "!");
+                        winnerMarble = marbleScript;
+                    }
+                    else
+                    {
+                        Debug.Log("Marble: " + marbleScript.ID + " finished!");
+                    }
+                    return;
+                }
+                
+                marbleScript.AddLap();
+            }
+            
+            // Reset to Initial Position
             marble.transform.position = _initialPositions[marble];
             Rigidbody rb = marble.GetComponent<Rigidbody>();
             Vector3 currentVelocity = rb.velocity;

@@ -127,6 +127,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1724514636}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &46103901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46103900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc06bc0633c7947078d55bd75da160e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 1
 --- !u!43 &117325036
 Mesh:
   m_ObjectHideFlags: 0
@@ -302,6 +315,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1436411120}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &201567908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201567907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc06bc0633c7947078d55bd75da160e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 0
 --- !u!1 &245498044
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,6 +510,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9747b0ff08b4f454b94b56ad453a610a, type: 3}
+--- !u!1 &566711827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5382564239659920080, guid: 0b9d2c952b8d746d49a245e9bc8f1de9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1286679596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &566711828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566711827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a166c6220c946e09e5e5c022af5f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  marble1: {fileID: 201567907}
+  marble2: {fileID: 46103900}
+  marble3: {fileID: 1979474546}
+  marble4: {fileID: 196646563}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1820,7 +1868,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: RaceManager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4045154298077465432, guid: 0b9d2c952b8d746d49a245e9bc8f1de9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0b9d2c952b8d746d49a245e9bc8f1de9, type: 3}
 --- !u!43 &1299439473
 Mesh:
