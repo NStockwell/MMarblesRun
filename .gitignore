@@ -70,3 +70,7 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 Miniclip Marbles Run/Library
+Miniclip Marbles Run/Temp
+Miniclip Marbles Run/.idea
+Miniclip Marbles Run/Assets/Scripts/.idea
+Miniclip Marbles Run/obj
