@@ -27,7 +27,10 @@ public class TriggerScript : MonoBehaviour
             {
                 winnerMarble = other.gameObject;
                 Debug.Log("Winner Marble is: " + winnerMarble.name);
-            }   
+            }
+            
+            // Reset Marble to starting position
+            RaceManagerScript.Instance.ResetMarble(other.gameObject);
         }
     }
 }
