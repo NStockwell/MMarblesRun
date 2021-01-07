@@ -22,11 +22,6 @@ public class Trigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Marble marble = other.gameObject.GetComponent<Marble>();
-        // Let the marble know he crossed the checkpoint
-        if (marble != null)
-        {
-            marble.AddCheckpoint(this);
-        }
         
         // Notify race manager that a checkpoint was reached
         RaceManager.Instance.CheckpointReached(this, other.gameObject.GetComponent<Marble>());

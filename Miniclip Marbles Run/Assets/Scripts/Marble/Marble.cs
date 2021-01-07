@@ -7,8 +7,8 @@ public class Marble : MonoBehaviour
 {
    public int ID;
    private Rigidbody rigidBody;
-   public int NumLaps { get; set; } = 2;
-   private Dictionary<Trigger, DateTime> _checkpoints = new Dictionary<Trigger, DateTime>();
+   public int NumLaps { get; set; } = 1;
+   public int CurrentPos { get; set; } = 1;
    public Rigidbody Rigidbody => rigidBody;
    public Vector3 InitialPosition { get; set; }
 
@@ -25,15 +25,5 @@ public class Marble : MonoBehaviour
    public void AddLap()
    {
       NumLaps++;
-   }
-
-   public Dictionary<Trigger, DateTime> GetCheckPoints()
-   {
-      return _checkpoints;
-   }
-
-   public void AddCheckpoint(Trigger trigger)
-   {
-      _checkpoints.Add(trigger, DateTime.Now);
    }
 }
