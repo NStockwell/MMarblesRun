@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -6,9 +7,10 @@ public class Marble : MonoBehaviour
 {
    public int ID;
    private Rigidbody rigidBody;
-   private int numLaps { get; set; } = 1;
-
+   public int NumLaps { get; set; } = 2;
+   private Dictionary<Trigger, DateTime> _checkpoints = new Dictionary<Trigger, DateTime>();
    public Rigidbody Rigidbody => rigidBody;
+   public Vector3 InitialPosition { get; set; }
 
    private void Awake()
    {
@@ -17,11 +19,21 @@ public class Marble : MonoBehaviour
 
    public int GetNumLaps()
    {
-      return numLaps;
+      return NumLaps;
    }
 
    public void AddLap()
    {
-      numLaps++;
+      NumLaps++;
+   }
+
+   public Dictionary<Trigger, DateTime> GetCheckPoints()
+   {
+      return _checkpoints;
+   }
+
+   public void AddCheckpoint(Trigger trigger)
+   {
+      _checkpoints.Add(trigger, DateTime.Now);
    }
 }

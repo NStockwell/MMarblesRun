@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Managers;
 using UnityEngine;
 
 public class RaceManager : MonoBehaviour
@@ -16,9 +18,11 @@ public class RaceManager : MonoBehaviour
     public GameObject marble2;
     public GameObject marble3;
     public GameObject marble4;
-
-    private Dictionary<GameObject, Vector3> _initialPositions = new Dictionary<GameObject, Vector3>();
+    
+    private List<GameObject> _marbles = new List<GameObject>();
+    private Trigger _latestTrigger = null;
     private Marble winnerMarble;
+    private Leaderboard _leaderboard = new Leaderboard();
     private const int k_maxLaps = 10;
     
     private void Awake() 
@@ -36,49 +40,67 @@ public class RaceManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _initialPositions.Add(marble1, marble1.transform.position);
-        _initialPositions.Add(marble2, marble2.transform.position);
-        _initialPositions.Add(marble3, marble3.transform.position);
-        _initialPositions.Add(marble4, marble4.transform.position);
+        _marbles.Add(marble1);
+        _marbles.Add(marble2);
+        _marbles.Add(marble3);
+        _marbles.Add(marble4);
+
+        foreach (var marble in _marbles)
+        {
+            marble.GetComponent<Marble>().InitialPosition = marble.transform.position;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void ResetMarble(GameObject marble)
     {
-        if (_initialPositions.ContainsKey(marble))
+        // Add a lap and check for end condition
+        Marble marbleScript = marble.GetComponent<Marble>();
+        if (marbleScript != null)
         {
-            // Add a lap and check for end condition
-            Marble marbleScript = marble.GetComponent<Marble>();
-            if (marbleScript != null)
+            if (marbleScript.GetNumLaps() == k_maxLaps)
             {
-                if (marbleScript.GetNumLaps() == k_maxLaps)
+                if (winnerMarble == null)
                 {
-                    if (winnerMarble == null)
-                    {
-                        Debug.Log("Winner Marble is: " + marbleScript.ID + "!");
-                        winnerMarble = marbleScript;
-                    }
-                    else
-                    {
-                        Debug.Log("Marble: " + marbleScript.ID + " finished!");
-                    }
-                    return;
+                    Debug.Log("Winner Marble is: " + marbleScript.ID + "!");
+                    winnerMarble = marbleScript;
                 }
-                
-                marbleScript.AddLap();
+                else
+                {
+                    Debug.Log("Marble: " + marbleScript.ID + " finished!");
+                }
+                return;
             }
             
-            // Reset to Initial Position
-            marble.transform.position = _initialPositions[marble];
+            marbleScript.AddLap();
+
+                // Reset to Initial Position
+            marble.transform.position = marbleScript.InitialPosition;
             Rigidbody rb = marble.GetComponent<Rigidbody>();
             Vector3 currentVelocity = rb.velocity;
             currentVelocity.z *= -1;
             rb.velocity = currentVelocity;
         }
+    }
+
+    public void CheckpointReached(Trigger trigger, Marble marble)
+    {
+        if (_latestTrigger == null)
+        {
+            _latestTrigger = trigger;
+        }
+        else
+        {
+            if (_latestTrigger.order < trigger.order)
+            {
+                _latestTrigger = trigger;
+            }
+        }
+        
+        _leaderboard.MarbleReachedCheckPoint(trigger, marble);
     }
 }
