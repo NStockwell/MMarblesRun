@@ -31,5 +31,9 @@ public class Trigger : MonoBehaviour
             // Reset Marble to starting position
             RaceManager.Instance.ResetMarble(other.gameObject);
         }
+        else
+        {
+            PollManager.Instance.ClosePoll(marble);
+        }
     }
 }
