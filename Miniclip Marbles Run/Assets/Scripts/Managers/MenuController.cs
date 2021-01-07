@@ -30,7 +30,7 @@ public class MenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayButton.onClick.AddListener(() => SceneManager.LoadScene("SampleSceneSeixas"));
+        PlayButton.onClick.AddListener(() => SceneManager.LoadScene("TeamSelectionScene"));
     }
 
     // Update is called once per frame
