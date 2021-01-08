@@ -652,6 +652,9 @@ MonoBehaviour:
   - {fileID: 7271274635138317186}
   - {fileID: 3955498688430460874}
   - {fileID: 4300924377276590387}
+  SecondsToStart: 5
+  Semaphor: {fileID: 1423296076457548459, guid: b8691377086e74cfe935c6e6b327d9be,
+    type: 3}
 --- !u!1 &4594542492717247749
 GameObject:
   m_ObjectHideFlags: 0

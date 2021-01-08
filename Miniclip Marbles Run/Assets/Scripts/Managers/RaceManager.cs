@@ -55,6 +55,7 @@ public class RaceManager : MonoBehaviour
         while (i > 0)
         {
             i--;
+            StartingGrid.Instance.LightNextSemaphor();
             yield return new WaitForSecondsRealtime(1);
         }
         StartingGrid.Instance.StartRace();
