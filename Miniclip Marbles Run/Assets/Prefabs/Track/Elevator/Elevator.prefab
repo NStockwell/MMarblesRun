@@ -320,6 +320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3850193425480735410}
+  - component: {fileID: 6357316073216035035}
   m_Layer: 0
   m_Name: Elevator
   m_TagString: Untagged
@@ -344,6 +345,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6357316073216035035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6424562098068559509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c462a71253ba24b139e7129794846a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeToClimb: 5
+  NumPaddles: 6
+  originalPaddle: {fileID: 5401248733000669652, guid: 7bdc0c56354f24f1d8180cf3e84721de,
+    type: 3}
+  start: {fileID: 6058893353279645732}
+  end: {fileID: 7100382803906916987}
 --- !u!1 &6466363529723526282
 GameObject:
   m_ObjectHideFlags: 0

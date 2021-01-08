@@ -21,8 +21,11 @@ public class Elevator : MonoBehaviour
             Paddle paddle = Instantiate(originalPaddle).GetComponent<Paddle>();
             paddle.delay = i * TimeToClimb / NumPaddles;
             paddle.start = start;
+            paddle.interval = TimeToClimb;
             paddle.end = end;
-            paddle.transform.rotation = transform.rotation;// Quaternion.Euler(paddle.transform.eulerAngles.x, transform.eulerAngles.y, paddle.transform.eulerAngles.z);
+            paddle.transform.rotation = transform.rotation;
+            paddle.transform.parent = transform;
+            paddle.transform.localScale = new Vector3(paddle.transform.localScale.x,0.2f, 1f);
         }
     }
 }
