@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TeamSelectionScene.unity
     guid: 018a01284ade84cb2b47ec8eab293bf9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleSceneSeixas.unity
     guid: ee506468991934215a31d554e65a6423
+  - enabled: 1
+    path: Assets/Scenes/StockwellScene.unity
+    guid: b1c97bfb21a9a4c12bbe3596e1de2d78
   m_configObjects: {}
