@@ -40,7 +40,8 @@ public class StartingGrid : MonoBehaviour
         for (int i = 0; i < SecondsToStart; i++)
         {
             var semaphor = Instantiate(Semaphor);
-            semaphor.transform.position = initialPosition + Vector3.right*xOffset * (i - (SecondsToStart-1)*0.5f) ;
+            semaphor.transform.parent = transform;
+            semaphor.transform.position = transform.position + initialPosition + Vector3.right*xOffset * (i - (SecondsToStart-1)*0.5f) ;
             semaphors.Add(semaphor);
         }
     }
