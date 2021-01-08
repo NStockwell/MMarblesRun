@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class StartingGrid : MonoBehaviour
 {
     private static StartingGrid instance;
@@ -26,8 +27,13 @@ public class StartingGrid : MonoBehaviour
     private List<GameObject> semaphors;
     private int litSemaphors = 0;
 
+    private AudioSource audioData;
+    public AudioClip redSound;
+    public AudioClip goSound;
+
     private void Awake()
     {
+        audioData = GetComponent<AudioSource>();
         Vector3 initialPosition = Vector3.up*0.5f;
         float xOffset = 0.06f;
         semaphors = new List<GameObject>();
@@ -45,7 +51,9 @@ public class StartingGrid : MonoBehaviour
         foreach (var semaphor in sems)
         {
             semaphor.GoRed();
-        } 
+        }
+        
+        audioData.PlayOneShot(redSound);
         litSemaphors++;
     }
 
@@ -57,8 +65,10 @@ public class StartingGrid : MonoBehaviour
             foreach (var s in sems)
             {
                 s.GoGreen();
-            } 
+            }
         }
+        
+        audioData.PlayOneShot(goSound);
         
         foreach (var bumper in bumpers)
         {
