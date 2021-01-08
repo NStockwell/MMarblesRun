@@ -3,8 +3,8 @@
     "m_SelectedPackage": {
         "deviceId": "d1cbcc7d",
         "name": "com.DefaultCompany.MiniclipMarblesRun",
-        "processId": 30092,
-        "exited": false
+        "processId": 18345,
+        "exited": true
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
@@ -19,6 +19,12 @@
             "name": "com.DefaultCompany.MiniclipMarblesRun",
             "processId": 30092,
             "exited": false
+        },
+        {
+            "deviceId": "d1cbcc7d",
+            "name": "com.DefaultCompany.MiniclipMarblesRun",
+            "processId": 18345,
+            "exited": true
         }
     ],
     "m_Tags": {
