@@ -26,14 +26,12 @@ public class Trigger : MonoBehaviour
         // Notify race manager that a checkpoint was reached
         RaceManager.Instance.CheckpointReached(this, other.gameObject.GetComponent<Marble>());
         
+        PollManager.Instance.ClosePoll(marble);
+
         if (isFinish)
         {
             // Reset Marble to starting position
             RaceManager.Instance.ResetMarble(other.gameObject);
-        }
-        else
-        {
-            PollManager.Instance.ClosePoll(marble);
         }
     }
 }
