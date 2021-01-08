@@ -45,11 +45,21 @@ public class RaceManager : MonoBehaviour
         _marbles.Add(marble3);
         _marbles.Add(marble4);
 
-        foreach (var marble in _marbles)
-        {
-            marble.GetComponent<Marble>().InitialPosition = marble.transform.position;
-        }
+        StartingGrid.Instance.SetMarbles(_marbles);
+        StartCoroutine(nameof(StartCountdown));
     }
+
+    IEnumerator StartCountdown()
+    {
+        int i = 5;
+        while (i > 0)
+        {
+            i--;
+            yield return new WaitForSecondsRealtime(1);
+        }
+        StartingGrid.Instance.StartRace();
+    }
+ 
 
     // Update is called once per frame
     void Update()
