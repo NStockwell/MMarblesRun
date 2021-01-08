@@ -25,7 +25,7 @@ public class Elevator : MonoBehaviour
             paddle.end = end;
             paddle.transform.rotation = transform.rotation;
             paddle.transform.parent = transform;
-            paddle.transform.localScale = new Vector3(paddle.transform.localScale.x,0.2f, 1f);
+            paddle.transform.localScale = new Vector3(0.01f,0.3f, 1f);
         }
     }
 }

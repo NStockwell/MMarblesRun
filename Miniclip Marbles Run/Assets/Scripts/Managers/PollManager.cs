@@ -24,7 +24,9 @@ public class PollManager : MonoBehaviour
     polls = new List<Poll>(8);
     for (int i = 0; i < 8; i++)
     {
-      polls.Add(new Poll());
+      var newPoll = new Poll();
+      newPoll.MarbleID = i;
+      polls.Add(newPoll);
     }
   }
 
@@ -34,8 +36,6 @@ public class PollManager : MonoBehaviour
       return;
     
     polls[marbleId].CastVote(ballot.option, ballot.weight, voterId);
-    
-    ClosePoll(RaceManager.Instance.marble1.GetComponent<Marble>());
   }
 
   public void ClosePoll(Marble marble)

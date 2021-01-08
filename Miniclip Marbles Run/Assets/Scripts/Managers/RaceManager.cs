@@ -23,7 +23,7 @@ public class RaceManager : MonoBehaviour
     private Trigger _latestTrigger = null;
     private Marble winnerMarble;
     private Leaderboard _leaderboard = new Leaderboard();
-    private const int k_maxLaps = 10;
+    private const int k_maxLaps = 3;
     
     private void Awake() 
     { 
@@ -89,12 +89,14 @@ public class RaceManager : MonoBehaviour
             
             marbleScript.AddLap();
 
-            // Reset to Initial Position
+            /*
+                // Reset to Initial Position
             marble.transform.position = marbleScript.InitialPosition;
             Rigidbody rb = marble.GetComponent<Rigidbody>();
             Vector3 currentVelocity = rb.velocity;
             currentVelocity.z *= -1;
             rb.velocity = currentVelocity;
+            */
         }
     }
 
