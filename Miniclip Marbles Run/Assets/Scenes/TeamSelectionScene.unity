@@ -254,6 +254,17 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 10092280068472867, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a309929bd5a0946cba0a2a5bbba2ebcd,
+        type: 3}
+    - target: {fileID: 10092280320407457, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Text
+      value: You never played a marble like this before
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 357583ef3e0b84fdc9d96c370be884cd, type: 3}
 --- !u!1 &429879112
@@ -1090,6 +1101,17 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 10092280068472867, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dab4070ea235d4588b78962f08ac3f7d,
+        type: 3}
+    - target: {fileID: 10092280320407457, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Text
+      value: Blast your marbles off the course
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 357583ef3e0b84fdc9d96c370be884cd, type: 3}
 --- !u!1001 &1023760097
@@ -1213,6 +1235,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10092280068472867, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f0c987f85513c4dbca382f6a062b4013,
+        type: 3}
+    - target: {fileID: 10092280320407457, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Text
+      value: Press y for marbles team
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 357583ef3e0b84fdc9d96c370be884cd, type: 3}
@@ -1343,6 +1376,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10092280068472867, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 792aa6b2a60e740c2803dc549154e28f,
+        type: 3}
+    - target: {fileID: 10092280320407457, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Text
+      value: Marble hard, but marble smart
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 357583ef3e0b84fdc9d96c370be884cd, type: 3}
@@ -1597,6 +1641,17 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 10092280068472867, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 72734a38f8a0647d0b0fdd41c42cd717,
+        type: 3}
+    - target: {fileID: 10092280320407457, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Text
+      value: Drible, Marble, Score
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 357583ef3e0b84fdc9d96c370be884cd, type: 3}
 --- !u!1001 &1277958395
@@ -1720,6 +1775,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10092280068472867, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: afbf3047f6475489ab415716ffbd1c34,
+        type: 3}
+    - target: {fileID: 10092280320407457, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Text
+      value: Who doesn't love a good game of marbles?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 357583ef3e0b84fdc9d96c370be884cd, type: 3}
@@ -2213,6 +2279,17 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 10092280068472867, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fb1d02cff83344a1b984791bfb9bd1d8,
+        type: 3}
+    - target: {fileID: 10092280320407457, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Text
+      value: We don't talk about Mini Militia
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 357583ef3e0b84fdc9d96c370be884cd, type: 3}
 --- !u!1 &2080312114
@@ -2578,6 +2655,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10092280068472867, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bf818605f382842ae9d44264a68a67dc,
+        type: 3}
+    - target: {fileID: 10092280320407457, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Text
+      value: The World's #1 Pool Marbles
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 357583ef3e0b84fdc9d96c370be884cd, type: 3}
