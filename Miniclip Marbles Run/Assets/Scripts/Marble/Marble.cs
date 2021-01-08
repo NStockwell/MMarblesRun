@@ -14,9 +14,24 @@ public class Marble : MonoBehaviour
    public float sideDamp = 0.1f;
    public float frontDamp = 0.2f;
 
+   public Material innerMaterial;
+   public MeshRenderer innerMeshRenderer;
+
+
+   private void OnValidate()
+   {
+      innerMeshRenderer.material = innerMaterial;
+   }
+
    private void Awake()
    {
       rigidBody = GetComponent<Rigidbody>();
+      innerMeshRenderer.material = innerMaterial;
+   }
+
+   private void LateUpdate()
+   {
+      innerMeshRenderer.gameObject.transform.rotation = transform.rotation;
    }
 
    public int GetNumLaps()
