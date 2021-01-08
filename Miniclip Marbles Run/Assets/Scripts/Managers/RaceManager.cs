@@ -89,7 +89,7 @@ public class RaceManager : MonoBehaviour
             
             marbleScript.AddLap();
 
-                // Reset to Initial Position
+            // Reset to Initial Position
             marble.transform.position = marbleScript.InitialPosition;
             Rigidbody rb = marble.GetComponent<Rigidbody>();
             Vector3 currentVelocity = rb.velocity;
