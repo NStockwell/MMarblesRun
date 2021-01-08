@@ -11,6 +11,7 @@ public class TeamMenuController : MonoBehaviour
 
     private int _currentNavIndex = 0;
     private readonly Color k_orange = new Color(1, 0.64F, 0, 1);
+    private readonly Color k_yellow = new Color(1, 0.92F, 0.08F, 1);
 
     private GameObject[] _teams = new GameObject[8];
 
@@ -168,7 +169,7 @@ public class TeamMenuController : MonoBehaviour
         }
 
         Image currentImage = _teams[_currentNavIndex].GetComponent<Image>();
-        currentImage.color = Color.white;
+        currentImage.color = k_yellow;
 
         _currentNavIndex++;
 
@@ -189,7 +190,7 @@ public class TeamMenuController : MonoBehaviour
         }
         
         Image currentImage = _teams[_currentNavIndex].GetComponent<Image>();
-        currentImage.color = Color.white;
+        currentImage.color = k_yellow;
 
         _currentNavIndex--;
 
