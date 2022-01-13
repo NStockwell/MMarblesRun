@@ -1,5 +1,6 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class AudienceManager : MonoBehaviour
@@ -9,6 +10,8 @@ public class AudienceManager : MonoBehaviour
     public TextMeshProUGUI CloserToTheCrowdLabel;
     public AudienceMember youInTheCrowd;
     public AudienceMember aboveYouInTheCrowd;
+    public Button nextMiniGameButton;
+    
     public float Score;
     public float maxPoints = 10;
     public float diffSteps = 0.2f;
@@ -19,6 +22,7 @@ public class AudienceManager : MonoBehaviour
     
     private void Start()
     {
+        nextMiniGameButton.gameObject.SetActive(false);
         initialDiff = Mathf.Abs(youInTheCrowd.transform.position.y - aboveYouInTheCrowd.transform.position.y);
         CloserToTheCrowdLabel.SetText("The closer you are to the crowd movement, the more points you'll get");
     }
@@ -40,6 +44,8 @@ public class AudienceManager : MonoBehaviour
         {
             ScoreLabel.SetText($"You got: {Score} points");
             CloserToTheCrowdLabel.SetText($"Round Ended, great effort!");
+            
+            nextMiniGameButton.gameObject.SetActive(true);
             return;
         }
 
@@ -66,5 +72,10 @@ public class AudienceManager : MonoBehaviour
         var scoreDiff = maxPoints - pointsTakenFromThisStep;
         Debug.Log($"howmany:{howManySteps} whichSte:{whichStepp}, pointsTaken:{pointsTakenFromThisStep}, scoreDif:{scoreDiff}, oldScore:{Score}");
         Score += scoreDiff;
+    }
+
+    public void NextMiniGame()
+    {
+        SceneManager.LoadScene("MiniGame2Scene");
     }
 }

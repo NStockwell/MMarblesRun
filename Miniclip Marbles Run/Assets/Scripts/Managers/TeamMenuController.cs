@@ -153,8 +153,7 @@ public class TeamMenuController : MonoBehaviour
     
     private void OnClickPlayButton()
     {
-        //SceneManager.LoadScene("StockwellScene");
-        SceneManager.LoadScene("MiniGame1Scene");
+        SceneManager.LoadScene("MiniGamesTutorials");
     }
 
     private void AdvanceIndex()

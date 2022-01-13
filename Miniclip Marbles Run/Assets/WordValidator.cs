@@ -17,6 +17,8 @@ public class WordValidator : MonoBehaviour
     private List<string> acceptedWords = new List<string>();
 
     private double Score = 0;
+
+    
     
     enum RejectReason
     {
