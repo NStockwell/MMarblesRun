@@ -14,7 +14,8 @@ public class MenuController : MonoBehaviour
     }
 
     public Button PlayButton;
-    
+    public double Minigame1Score;
+    public double Minigame2Score;
     private void Awake() 
     { 
         if (_instance != null && _instance != this) 

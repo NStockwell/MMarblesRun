@@ -70,6 +70,7 @@ public class AudienceManager : MonoBehaviour
 
     public void NextMiniGame()
     {
+        MenuController.Instance.Minigame1Score = Score;
         SceneManager.LoadScene("MiniGame2Scene");
     }
 }

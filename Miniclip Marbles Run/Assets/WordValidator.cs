@@ -180,6 +180,7 @@ public class WordValidator : MonoBehaviour
 
     public void GoToNextScene()
     {
+        MenuController.Instance.Minigame2Score = Score;
         SceneManager.LoadScene("MiniGamesResults");
     }
 }
