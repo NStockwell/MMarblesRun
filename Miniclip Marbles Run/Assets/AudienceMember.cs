@@ -43,7 +43,7 @@ public class AudienceMember : MonoBehaviour
             float offset = Time.fixedDeltaTime * youRate * (buttonIsBeingPressed ? 1 : -1);
             float newYPos = Mathf.Clamp(transform.position.y + offset, initalPosY, initalPosY + 2);
             
-            Debug.Log($" newYpos: {newYPos}, offset{offset}, {buttonIsBeingPressed}");
+            //Debug.Log($" newYpos: {newYPos}, offset{offset}, {buttonIsBeingPressed}");
             return newYPos;
         }
 
@@ -52,7 +52,7 @@ public class AudienceMember : MonoBehaviour
 
     private float UpdateOthersMemberYPos()
     {
-        Debug.Log($"X:{transform.position.x}, d:{delay}");
+        //Debug.Log($"X:{transform.position.x}, d:{delay}");
 
         if (delay > 0)
         {

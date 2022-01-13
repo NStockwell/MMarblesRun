@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028358, g: 0.22571361, b: 0.30692247, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 533684591}
   - component: {fileID: 533684590}
   m_Layer: 5
-  m_Name: GetReady
+  m_Name: GetReady_Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1798,13 +1798,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684249089}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.10938167, y: -0.8754261, z: 0.40821788, w: 0.23456976}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -150, z: 0}
 --- !u!1 &1719892566
 GameObject:
   m_ObjectHideFlags: 0
@@ -1817,7 +1817,7 @@ GameObject:
   - component: {fileID: 1719892569}
   - component: {fileID: 1719892568}
   m_Layer: 5
-  m_Name: CloserWithCrowd
+  m_Name: Rules_Finishes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1861,7 +1861,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Get Ready In:'
+  m_text: Rules
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2193,15 +2193,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreLabel: {fileID: 1513991705}
   GetReadyLabel: {fileID: 533684590}
-  CloserToTheCrowdLabel: {fileID: 1719892568}
+  rules_finishesIn_Label: {fileID: 1719892568}
   youInTheCrowd: {fileID: 1230806275}
   aboveYouInTheCrowd: {fileID: 1557116279}
   nextMiniGameButton: {fileID: 1889139551}
+  minigameTimer: {fileID: 1994311813}
   Score: 0
   maxPoints: 10
   diffSteps: 0.2
-  timer: 10
-  delay: 10
 --- !u!4 &1961910809
 Transform:
   m_ObjectHideFlags: 0
@@ -2312,6 +2311,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1969296312}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1994311812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1994311814}
+  - component: {fileID: 1994311813}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1994311813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994311812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7085f66e399c47b9bd604e3efee6950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 10
+  delay: 10
+--- !u!4 &1994311814
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994311812}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2143694437
 GameObject:
   m_ObjectHideFlags: 0

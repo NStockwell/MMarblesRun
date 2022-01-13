@@ -7,52 +7,46 @@ public class AudienceManager : MonoBehaviour
 {
     public TextMeshProUGUI ScoreLabel;
     public TextMeshProUGUI GetReadyLabel;
-    public TextMeshProUGUI CloserToTheCrowdLabel;
+    public TextMeshProUGUI rules_finishesIn_Label;
     public AudienceMember youInTheCrowd;
     public AudienceMember aboveYouInTheCrowd;
     public Button nextMiniGameButton;
+    public MinigameTimer minigameTimer;
     
     public float Score;
     public float maxPoints = 10;
     public float diffSteps = 0.2f;
     private float initialDiff;
 
-    public float timer = 5f;
-    public float delay = 3f;
-    
     private void Start()
     {
         nextMiniGameButton.gameObject.SetActive(false);
         initialDiff = Mathf.Abs(youInTheCrowd.transform.position.y - aboveYouInTheCrowd.transform.position.y);
-        CloserToTheCrowdLabel.SetText("The closer you are to the crowd movement, the more points you'll get");
+        rules_finishesIn_Label.SetText("The closer you are to the crowd movement, the more points you'll get");
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (delay > 0)
+        if (!minigameTimer.HasDelayExpired())
         {
             GetReadyLabel.enabled = true;
-            GetReadyLabel.SetText($"Get Ready In: {string.Format("{0:0.00}", delay)}");
-            delay -= Time.fixedDeltaTime;
+            GetReadyLabel.SetText($"Get Ready In: {string.Format("{0:0.00}", minigameTimer.Delay)}");
             return;
         }
 
         GetReadyLabel.enabled = false;
         ScoreLabel.gameObject.SetActive(true);
-        if (timer < 0)
+        if (minigameTimer.HasTimerExpired())
         {
             ScoreLabel.SetText($"You got: {Score} points");
-            CloserToTheCrowdLabel.SetText($"Round Ended, great effort!");
+            rules_finishesIn_Label.SetText($"Round Ended, great effort!");
             
             nextMiniGameButton.gameObject.SetActive(true);
             return;
         }
-
-        timer -= Time.fixedDeltaTime;
-
         
-        CloserToTheCrowdLabel.SetText($"The closer you are to the crowd movement, the more points you'll get. \nRound finishes in {string.Format("{0:0.00}", timer)}");
+        rules_finishesIn_Label.SetText($"The closer you are to the crowd movement, the more points you'll get. \nRound finishes in {string.Format("{0:0.00}", minigameTimer.Timer)}");
         float youYPos = youInTheCrowd.transform.position.y;
         float aboveYouYPos = aboveYouInTheCrowd.transform.position.y;
 
@@ -70,7 +64,7 @@ public class AudienceManager : MonoBehaviour
             pointsTakenFromThisStep = maxPoints;
         
         var scoreDiff = maxPoints - pointsTakenFromThisStep;
-        Debug.Log($"howmany:{howManySteps} whichSte:{whichStepp}, pointsTaken:{pointsTakenFromThisStep}, scoreDif:{scoreDiff}, oldScore:{Score}");
+        //Debug.Log($"howmany:{howManySteps} whichSte:{whichStepp}, pointsTaken:{pointsTakenFromThisStep}, scoreDif:{scoreDiff}, oldScore:{Score}");
         Score += scoreDiff;
     }
 
