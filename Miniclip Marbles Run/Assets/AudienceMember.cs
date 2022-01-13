@@ -11,6 +11,7 @@ public class AudienceMember : MonoBehaviour
     private bool buttonIsBeingPressed = false;
     public float youRate = 2.1f;
     public float theyCycle = 180;
+    
 
     private void Start()
     {
@@ -29,7 +30,7 @@ public class AudienceMember : MonoBehaviour
         buttonIsBeingPressed = false;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         float newYPos = UpdateMemberYPos();
         transform.position = new Vector3(transform.position.x, newYPos, transform.position.z);
@@ -45,6 +46,12 @@ public class AudienceMember : MonoBehaviour
             Debug.Log($" newYpos: {newYPos}, offset{offset}, {buttonIsBeingPressed}");
             return newYPos;
         }
+
+        return UpdateOthersMemberYPos();
+    }
+
+    private float UpdateOthersMemberYPos()
+    {
         Debug.Log($"X:{transform.position.x}, d:{delay}");
 
         if (delay > 0)
@@ -52,15 +59,16 @@ public class AudienceMember : MonoBehaviour
             delay -= Time.fixedDeltaTime;
             return initalPosY;
         }
+
         float remainTime = Time.fixedDeltaTime;
         if (delay < 0)
         {
             remainTime = -delay;
             delay = 0;
         }
+
         var np = Sin(accumulatedTime) + 1 + initalPosY;
         accumulatedTime += Deg2Rad * remainTime * theyCycle;
         return np;
-   
     }
 }
