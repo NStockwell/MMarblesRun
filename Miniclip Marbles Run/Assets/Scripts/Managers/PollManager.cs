@@ -1,9 +1,17 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
+using Toggle = UnityEngine.UI.Toggle;
 
 public class PollManager : MonoBehaviour
 {
+
+  public Toggle Speed;
+  public Toggle Break;
+  public Toggle Left;
+  public Toggle Right;
+  
   private static PollManager instance;
   public static PollManager Instance
   {
@@ -43,6 +51,18 @@ public class PollManager : MonoBehaviour
     int marbleId = marble.ID;
     polls[marbleId].ApplyInputs(marble);
     BotsVote(marble);
+
+    var mymarble = RaceManager.Instance.marble1.GetComponent<Marble>();
+    if(marbleId == mymarble.ID)
+      ResetToggles();
+  }
+
+  private void ResetToggles()
+  {
+    Speed.isOn = false;
+    Break.isOn = false;
+    Left.isOn = false;
+    Right.isOn = false;
   }
 
   private void BotsVote(Marble marble)

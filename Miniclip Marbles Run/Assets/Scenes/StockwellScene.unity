@@ -958,7 +958,7 @@ PrefabInstance:
     - target: {fileID: 7608446361848772201, guid: 1b099a9676b754cc4b736628120d842f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.54
+      value: 6.42
       objectReference: {fileID: 0}
     - target: {fileID: 7608446361848772201, guid: 1b099a9676b754cc4b736628120d842f,
         type: 3}
@@ -2170,6 +2170,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_MatchWidthOrHeight
       value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869039135835495549, guid: 1afe095798a624ea9b47516897f95840,
+        type: 3}
+      propertyPath: m_Name
+      value: ActionUp_C
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869039135868398241, guid: 1afe095798a624ea9b47516897f95840,
+        type: 3}
+      propertyPath: m_Name
+      value: ActionDown_D
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869039136833250826, guid: 1afe095798a624ea9b47516897f95840,
+        type: 3}
+      propertyPath: m_Name
+      value: ActionLeft_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869039137389291489, guid: 1afe095798a624ea9b47516897f95840,
+        type: 3}
+      propertyPath: m_Name
+      value: ActionRight_B
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1afe095798a624ea9b47516897f95840, type: 3}
