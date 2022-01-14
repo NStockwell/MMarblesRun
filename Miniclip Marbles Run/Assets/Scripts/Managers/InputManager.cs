@@ -32,7 +32,7 @@ public class InputManager : MonoBehaviour
         GatherInstances();
         Poll.Ballot b;
         b.option = Poll.BallotOption.OptionA;
-        b.weight = 1;
+        b.weight = MenuController.Instance.weightInVotes[7];
         pollManager.CastVote(myMarble.ID, b, 1);
     }
     
@@ -41,7 +41,7 @@ public class InputManager : MonoBehaviour
         GatherInstances();
         Poll.Ballot b;
         b.option = Poll.BallotOption.OptionB;
-        b.weight = 1;
+        b.weight = MenuController.Instance.weightInVotes[7];
         pollManager.CastVote(myMarble.ID, b, 1);
     }
     
@@ -50,7 +50,7 @@ public class InputManager : MonoBehaviour
         GatherInstances();
         Poll.Ballot b;
         b.option = Poll.BallotOption.OptionC;
-        b.weight = 1;
+        b.weight = MenuController.Instance.weightInVotes[7];
         pollManager.CastVote(myMarble.ID, b, 1);
     }
     
@@ -59,7 +59,7 @@ public class InputManager : MonoBehaviour
         GatherInstances();
         Poll.Ballot b;
         b.option = Poll.BallotOption.OptionD;
-        b.weight = 1;
+        b.weight = MenuController.Instance.weightInVotes[7];
         pollManager.CastVote(myMarble.ID, b, 1);
     }
 }

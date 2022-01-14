@@ -83,7 +83,7 @@ public class Poll
     UpdateVoteCount();
   }
 
-  private void UpdateVoteCount()
+  public void UpdateVoteCount()
   {
     totalVotes = optionAVotes + optionBVotes + optionCVotes + optionDVotes;
     if (totalVotes == 0)
@@ -96,10 +96,10 @@ public class Poll
     }
     else
     {
-      AVotesPercentage = optionAVotes / totalVotes;
-      BVotesPercentage = optionBVotes / totalVotes;
-      CVotesPercentage = optionCVotes / totalVotes;
-      DVotesPercentage = optionDVotes / totalVotes;
+      AVotesPercentage = optionAVotes;
+      BVotesPercentage = optionBVotes;
+      CVotesPercentage = optionCVotes;
+      DVotesPercentage = optionDVotes;
     }
 
     Debug.Log($"Percentages:{MarbleID} {AVotesPercentage}, {BVotesPercentage}, {CVotesPercentage}, {DVotesPercentage}");

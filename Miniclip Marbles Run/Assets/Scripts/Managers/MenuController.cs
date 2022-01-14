@@ -16,6 +16,9 @@ public class MenuController : MonoBehaviour
     public Button PlayButton;
     public double Minigame1Score;
     public double Minigame2Score;
+
+    public int[] othersScores;
+    public float[] weightInVotes;
     private void Awake() 
     { 
         if (_instance != null && _instance != this) 
@@ -32,6 +35,9 @@ public class MenuController : MonoBehaviour
     void Start()
     {
         PlayButton.onClick.AddListener(() => SceneManager.LoadScene("TeamSelectionScene"));
+        othersScores = new [] {0,0,0,0,0,0,0};
+        float balanceWeight = 1 / 8.0f;
+        weightInVotes = new[] {balanceWeight,balanceWeight,balanceWeight,balanceWeight,balanceWeight,balanceWeight,balanceWeight,balanceWeight};
     }
 
     // Update is called once per frame

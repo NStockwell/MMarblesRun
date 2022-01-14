@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PollManager : MonoBehaviour
 {
@@ -42,5 +42,33 @@ public class PollManager : MonoBehaviour
   {
     int marbleId = marble.ID;
     polls[marbleId].ApplyInputs(marble);
+    BotsVote(marble);
+  }
+
+  private void BotsVote(Marble marble)
+  {
+    for (int i = 0; i < 7; i++)
+    {
+      Poll.Ballot ballot = new Poll.Ballot();
+      ballot.weight = MenuController.Instance.weightInVotes[i];
+      int option = Random.Range(0, 4);
+      switch (option)
+      {
+        case 0:
+          ballot.option = Poll.BallotOption.OptionA;
+          break;
+        case 1:
+          ballot.option = Poll.BallotOption.OptionB;
+          break;
+        case 2:
+          ballot.option = Poll.BallotOption.OptionC;
+          break;
+        case 3:
+          ballot.option = Poll.BallotOption.OptionD;
+          break;
+      }
+      CastVote(marble.ID, ballot, i*10);
+      polls[marble.ID].UpdateVoteCount();
+    }
   }
 }
