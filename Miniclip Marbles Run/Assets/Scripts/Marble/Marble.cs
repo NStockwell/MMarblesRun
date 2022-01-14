@@ -47,26 +47,26 @@ public class Marble : MonoBehaviour
    public void ApplyLeftImpulse()
    {
       var rotatedVector = Quaternion.Euler(0, -90, 0) * rigidBody.velocity;
-      Debug.Log($"apply impulse left {rotatedVector}");
+      //Debug.Log($"apply impulse left {rotatedVector}");
       rigidBody.AddForce(rotatedVector*sideDamp, ForceMode.Impulse);  
    }
 
    public void ApplyRightImpulse()
    {
       var rotatedVector = Quaternion.Euler(0, 90, 0) * rigidBody.velocity;
-      Debug.Log($"apply impulse right {rotatedVector}");
+      //Debug.Log($"apply impulse right {rotatedVector}");
       rigidBody.AddForce(rotatedVector*sideDamp, ForceMode.Impulse);
    }
 
    public void ApplySpeedImpulse()
    {
-      Debug.Log($"apply impulse speed {rigidBody.velocity}");
+      //Debug.Log($"apply impulse speed {rigidBody.velocity}");
       rigidBody.AddForce(rigidBody.velocity * frontDamp, ForceMode.Impulse);
    }
 
    public void ApplyBreakImpulse()
    {
-      Debug.Log($"apply impulse break {-rigidBody.velocity}");
+      //Debug.Log($"apply impulse break {-rigidBody.velocity}");
       rigidBody.AddForce(-rigidBody.velocity*frontDamp, ForceMode.Impulse);
    }
 }

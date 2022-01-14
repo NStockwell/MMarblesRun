@@ -102,7 +102,7 @@ public class Poll
       DVotesPercentage = optionDVotes;
     }
 
-    Debug.Log($"Percentages:{MarbleID} {AVotesPercentage}, {BVotesPercentage}, {CVotesPercentage}, {DVotesPercentage}");
+    //Debug.Log($"Percentages:{MarbleID} {AVotesPercentage}, {BVotesPercentage}, {CVotesPercentage}, {DVotesPercentage}");
   }
 
   public void ApplyInputs(Marble marble)

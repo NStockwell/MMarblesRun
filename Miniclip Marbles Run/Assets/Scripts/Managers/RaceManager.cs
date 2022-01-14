@@ -3,10 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Managers;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RaceManager : MonoBehaviour
 {
+
+    public GameObject EndGameObject;
+    public TextMeshProUGUI EndGameResult;
+    
     private static RaceManager _instance;
 
     public static RaceManager Instance
@@ -77,12 +83,13 @@ public class RaceManager : MonoBehaviour
             {
                 if (winnerMarble == null)
                 {
-                    Debug.Log("Winner Marble is: " + marbleScript.ID + "!");
                     winnerMarble = marbleScript;
+                    EndGameObject.SetActive(true);
+                    EndGameResult.SetText($"Winner Marble is: " + marbleScript.ID + "!");
                 }
                 else
                 {
-                    Debug.Log("Marble: " + marbleScript.ID + " finished!");
+                    //Debug.Log("Marble: " + marbleScript.ID + " finished!");
                 }
                 return;
             }
@@ -115,5 +122,10 @@ public class RaceManager : MonoBehaviour
         }
         
         _leaderboard.MarbleReachedCheckPoint(trigger, marble);
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("StartScene");
     }
 }

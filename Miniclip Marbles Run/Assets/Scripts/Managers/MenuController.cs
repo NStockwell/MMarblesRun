@@ -13,7 +13,6 @@ public class MenuController : MonoBehaviour
         get => _instance;
     }
 
-    public Button PlayButton;
     public double Minigame1Score;
     public double Minigame2Score;
 
@@ -34,7 +33,6 @@ public class MenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayButton.onClick.AddListener(() => SceneManager.LoadScene("TeamSelectionScene"));
         othersScores = new [] {0,0,0,0,0,0,0};
         float balanceWeight = 1 / 8.0f;
         weightInVotes = new[] {balanceWeight,balanceWeight,balanceWeight,balanceWeight,balanceWeight,balanceWeight,balanceWeight,balanceWeight};
