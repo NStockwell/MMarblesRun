@@ -30,10 +30,10 @@ public class ToTheRaces : MonoBehaviour
        var scores = MenuController.Instance.othersScores;
        var weights = MenuController.Instance.weightInVotes;
        
-       resultsAndWeights.SetText($"Total scores and weights for decisions of the driver:\n\nYou: {total} points, {string.Format("{0:0.00}", weights[7]*100)}");
+       resultsAndWeights.SetText($"Total scores and weights for decisions of the driver:\n\nYou: {total} points, {string.Format("{0:0.00}", weights[7]*100)}%");
        for (int i = 0; i < scores.Length; i++)
        {
-           resultsAndWeights.SetText($"{resultsAndWeights.text}\nBot {i+1}: {scores[i]} points, {string.Format("{0:0.00}", weights[i]*100)}");
+           resultsAndWeights.SetText($"{resultsAndWeights.text}\nBot {i+1}: {scores[i]} points, {string.Format("{0:0.00}", weights[i]*100)}%");
        }
     }
 
