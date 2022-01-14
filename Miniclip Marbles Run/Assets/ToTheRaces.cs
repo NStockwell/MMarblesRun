@@ -9,9 +9,10 @@ public class ToTheRaces : MonoBehaviour
     public TextMeshProUGUI resultsAndWeights; 
     private void Start()
     {
-       results.SetText($"Results from minigames\n\nMexican Wave: {MenuController.Instance.Minigame1Score} points\nIncentive Words: {MenuController.Instance.Minigame2Score} points");
-       int total = (int) (MenuController.Instance.Minigame2Score + MenuController.Instance.Minigame1Score);
+        int total = (int) (MenuController.Instance.Minigame2Score + MenuController.Instance.Minigame1Score);
 
+       results.SetText($"Results from minigames\n\nMexican Wave: {MenuController.Instance.Minigame1Score} points\nIncentive Words: {MenuController.Instance.Minigame2Score} points\nTotal: {total} points");
+      
        int teamTotal = total;
        for (int i = 0; i < 7; i++)
        {
