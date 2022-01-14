@@ -5,9 +5,11 @@ using Image = UnityEngine.UI.Image;
 
 public class TeamMenuController : MonoBehaviour
 {
+ /*
     public Button LeftScroller;
-    public Button RightScroller;
-    public Button PlayButton;
+    public Button RightScroller;  
+   */
+ public Button PlayButton;
 
     private int _currentNavIndex = 0;
     private readonly Color k_orange = new Color(1, 0.64F, 0, 1);
@@ -18,16 +20,19 @@ public class TeamMenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /*
         LeftScroller.gameObject.SetActive(false);
         LeftScroller.onClick.AddListener(OnClickLeft);
         LeftScroller.gameObject.SetActive(false);
         RightScroller.onClick.AddListener(OnClickRight);
+        */
         PlayButton.onClick.AddListener(OnClickPlayButton);
 
         _teams[0] = GameObject.Find("Team1");
         _teams[1] = GameObject.Find("Team2");
         _teams[2] = GameObject.Find("Team3");
         _teams[3] = GameObject.Find("Team4");
+       /*
         _teams[4] = GameObject.Find("Team5");
         _teams[4].SetActive(false);
         _teams[5] = GameObject.Find("Team6");
@@ -36,6 +41,7 @@ public class TeamMenuController : MonoBehaviour
         _teams[6].SetActive(false);
         _teams[7] = GameObject.Find("Team8");
         _teams[7].SetActive(false);
+        */
 
         Image img = _teams[0].GetComponent<Image>();
         img.color = k_orange;
@@ -158,6 +164,7 @@ public class TeamMenuController : MonoBehaviour
 
     private void AdvanceIndex()
     {
+        /*
         if (_currentNavIndex >= 0 && !LeftScroller.gameObject.activeSelf)
         {
             LeftScroller.gameObject.SetActive(true);
@@ -167,6 +174,7 @@ public class TeamMenuController : MonoBehaviour
         {
             RightScroller.gameObject.SetActive(false);
         }
+        */
 
         Image currentImage = _teams[_currentNavIndex].GetComponent<Image>();
         currentImage.color = k_yellow;
@@ -179,6 +187,7 @@ public class TeamMenuController : MonoBehaviour
     
     private void ReduceIndex()
     {
+        /*
         if (_currentNavIndex <= 7 && !RightScroller.gameObject.activeSelf)
         {
             RightScroller.gameObject.SetActive(true);
@@ -188,6 +197,7 @@ public class TeamMenuController : MonoBehaviour
         {
             LeftScroller.gameObject.SetActive(false);
         }
+        */
         
         Image currentImage = _teams[_currentNavIndex].GetComponent<Image>();
         currentImage.color = k_yellow;

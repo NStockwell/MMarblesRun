@@ -147,7 +147,7 @@ PrefabInstance:
     - target: {fileID: 10092279906442652, guid: 357583ef3e0b84fdc9d96c370be884cd,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 10092279906442653, guid: 357583ef3e0b84fdc9d96c370be884cd,
         type: 3}
@@ -591,7 +591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &542864859
 RectTransform:
   m_ObjectHideFlags: 0
@@ -989,7 +989,7 @@ PrefabInstance:
     - target: {fileID: 10092279906442652, guid: 357583ef3e0b84fdc9d96c370be884cd,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 10092279906442653, guid: 357583ef3e0b84fdc9d96c370be884cd,
         type: 3}
@@ -1236,6 +1236,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 10092279906442654, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.50980395
+      objectReference: {fileID: 0}
+    - target: {fileID: 10092279906442654, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.50980395
+      objectReference: {fileID: 0}
+    - target: {fileID: 10092279906442654, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.50980395
+      objectReference: {fileID: 0}
     - target: {fileID: 10092280068472867, guid: 357583ef3e0b84fdc9d96c370be884cd,
         type: 3}
       propertyPath: m_Sprite
@@ -1375,6 +1390,31 @@ PrefabInstance:
     - target: {fileID: 10092279906442653, guid: 357583ef3e0b84fdc9d96c370be884cd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 10092279906442654, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 10092279906442654, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 10092279906442654, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 10092279906442654, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 10092279906442654, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 10092280068472867, guid: 357583ef3e0b84fdc9d96c370be884cd,
@@ -1534,7 +1574,7 @@ PrefabInstance:
     - target: {fileID: 10092279906442652, guid: 357583ef3e0b84fdc9d96c370be884cd,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 10092279906442653, guid: 357583ef3e0b84fdc9d96c370be884cd,
         type: 3}
@@ -1775,6 +1815,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 10092279906442654, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.50980395
+      objectReference: {fileID: 0}
+    - target: {fileID: 10092279906442654, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.50980395
+      objectReference: {fileID: 0}
+    - target: {fileID: 10092279906442654, guid: 357583ef3e0b84fdc9d96c370be884cd,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.50980395
       objectReference: {fileID: 0}
     - target: {fileID: 10092280068472867, guid: 357583ef3e0b84fdc9d96c370be884cd,
         type: 3}
@@ -2172,7 +2227,7 @@ PrefabInstance:
     - target: {fileID: 10092279906442652, guid: 357583ef3e0b84fdc9d96c370be884cd,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 10092279906442653, guid: 357583ef3e0b84fdc9d96c370be884cd,
         type: 3}
@@ -2311,7 +2366,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2080312115
 RectTransform:
   m_ObjectHideFlags: 0
